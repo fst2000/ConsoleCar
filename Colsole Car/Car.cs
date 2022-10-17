@@ -6,12 +6,10 @@ using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Colsole_Car
+namespace ColsoleCar
 {
     internal class Car
     {
-        string carRight = "   ____\n__/ |  \\____\n'–@–---—––@–'";
-        string carLeft = "     ____\n____/  | \\__\n'–@–---—––@–'";
         bool carDirection = true;
         int posX;
         int posY;
