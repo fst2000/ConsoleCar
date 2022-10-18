@@ -25,7 +25,7 @@ namespace ColsoleCar
             for (int i = 0; i < array.Length; i++)
             {
                 Console.SetCursorPosition(x - 1, y + i);
-                Console.WriteLine("              ");
+                Console.Write(new string(' ', array[i].Length));
             }
         }
 
