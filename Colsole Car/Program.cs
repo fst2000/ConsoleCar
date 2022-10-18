@@ -11,7 +11,10 @@ class Program
         ConsoleDrawer consoleDrawer = new ConsoleDrawer();
 
         while (true)
-        {           
+        {
+            car.CarMove();
+            consoleDrawer.Clear(carRight, car.posX, car.posY);
+            consoleDrawer.Draw(carRight, car.posX, car.posY);
             Thread.Sleep(30);
         }
     }

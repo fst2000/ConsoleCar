@@ -11,7 +11,11 @@ namespace ColsoleCar
     internal class Car
     {
         bool carDirection = true;
-        int posX;
-        int posY;
+        public int posX { get; private set; }
+        public int posY { get; private set; }
+        public void CarMove()
+        {
+            posX += carDirection ? 1 : -1;
+        }
     }
 }
