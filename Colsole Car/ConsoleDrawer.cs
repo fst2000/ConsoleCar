@@ -11,21 +11,33 @@ namespace ColsoleCar
     {
         public void Draw(string subject, int x,int y)
         {
-            Console.CursorVisible = false;
-            string[] array = subject.Split("\n");
-            for (int i = 0; i < array.Length; i++)
+            if( x <= Console.BufferWidth - 1)
             {
-                Console.SetCursorPosition(x, y + i);
-                Console.WriteLine(array[i]);
+                Console.CursorVisible = false;
+                string[] array = subject.Split("\n");
+                for (int i = 0; i < array.Length; i++)
+                {
+                    Console.SetCursorPosition(x, y + i);
+                    Console.WriteLine(array[i]);
+                }
             }
+            
         }
         public void Clear(string subject, int x,int y)
         {
             string[] array = subject.Split("\n");
-            for (int i = 0; i < array.Length; i++)
+            if (x <= Console.BufferWidth - 1)
             {
-                Console.SetCursorPosition(x - 1, y + i);
-                Console.Write(new string(' ', array[i].Length));
+                
+                for (int i = 0; i < array.Length; i++)
+                {
+                    Console.SetCursorPosition(x - 1, y + i);
+                    Console.Write(new string(' ', array[i].Length));
+                }
+            }
+            else
+            {
+                Console.Clear();
             }
         }
 
